@@ -1,0 +1,44 @@
+.footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 24px; /* Adjust the icon size */
+    transition: color 0.3s;
+  }
+  
+  .social-icon:hover {
+    color: #3b82f6; /* Change this color to match your theme */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

@@ -1,0 +1,159 @@
+/* Main container for all services */
+.services-section {
+  padding: 4rem 2rem;
+  background: #000; /* Black background */
+  text-align: center;
+}
+
+/* Services section heading */
+.services-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* Clip the background to the text */
+  margin-bottom: 3rem;
+}
+
+/* Flex container for all categories */
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Individual service category containers */
+.service-category {
+  background: transparent; /* Make background transparent */
+  border: 2px solid #fff; /* White border around the category */
+  border-radius: 10px;
+  padding: 1.5rem 1rem;
+  flex: 1 1 calc(33.33% - 2rem); /* Equal spacing for three categories */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for visual depth */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+}
+
+.service-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhance shadow on hover */
+}
+
+/* Headings for categories */
+.service-category h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+/* Icons container for each category */
+.service-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Individual icon cards */
+.service-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: black; /* Slightly darker background for icons */
+  border-radius: 8px;
+  padding: 1rem;
+  width: 60px;
+  height: 100px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.service-icon:hover {
+  background: #3b82f6; /* Adds a hover effect with blue highlight */
+}
+
+/* Image icons styling */
+.service-icon img {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 0.5rem;
+  filter: none; /* Keeps the original colors of the icons */
+}
+
+/* Font Awesome icons styling */
+.service-icon i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: inherit; /* Keep default colors */
+}
+
+/* Text below the icons */
+.service-icon p {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-container {
+    gap: 1.5rem; /* Reduce gap between categories */
+  }
+
+  .service-category {
+    flex: 1 1 calc(50% - 1.5rem); /* Two columns on medium screens */
+    margin-bottom: 2rem; /* Add space between rows */
+  }
+}
+
+@media (max-width: 768px) {
+  .services-container {
+    gap: 1rem; /* Reduce gap further for smaller screens */
+  }
+
+  .service-category {
+    flex: 1 1 100%; /* Single column layout */
+    margin-bottom: 1.5rem; /* Space between categories */
+  }
+
+  .services-heading {
+    font-size: 2rem; /* Reduce heading size */
+    margin-bottom: 2rem; 
+    margin-top: 100px;/* Reduce space below heading */
+  }
+
+  .services-section {
+    padding: 3rem 1rem; /* Adjust padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .services-section {
+    padding: 2rem 1rem; /* Further reduce padding */
+  }
+
+  .services-heading {
+    font-size: 1.8rem; /* Smaller heading size */
+    margin-bottom: 1.5rem;
+  }
+
+  .service-category {
+    padding: 1rem 0.5rem; /* Reduce padding inside the category */
+  }
+
+  .service-icon {
+    width: 50px;
+    height: 90px; /* Adjust icon dimensions for smaller screens */
+    padding: 0.8rem;
+  }
+
+  .service-icon img {
+    width: 35px;
+    height: 35px; /* Adjust icon image size */
+  }
+
+  .service-icon p {
+    font-size: 0.8rem; /* Smaller text below the icons */
+  }
+}

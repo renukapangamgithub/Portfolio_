@@ -1,0 +1,153 @@
+/* Navbar Container */
+.navbar {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem 2rem;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Logo Section */
+/* Logo Section */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem; /* Adjust spacing between elements */
+  font-size: 2rem; /* Base font size for consistency */
+}
+
+.logo-symbol {
+  font-size: 1.2rem; /* Smaller size for symbols */
+  color: #fff; /* Purple for symbols */
+  font-weight: 400; /* Keep symbols thin */
+}
+
+.logo-highlight {
+ /* Handwritten font for Pangam */
+  font-size: 2rem; /* Match size with Renuka */
+  font-weight: 200; /* Thinner font weight */
+   /* Add an italic touch */
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899); /* Blue to Purple to Pink gradient */
+  color: transparent; /* Make the text transparent */
+  background-clip: text; /* Background clip to the text */
+  -webkit-background-clip: text; /* Retained for WebKit compatibility, but still causes errors in some tools */
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #9333ea;
+}
+
+/* GitHub Button and Hamburger Menu */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* GitHub Button */
+.github-button {
+  margin-left: 2rem; /* Space between links and GitHub button */
+}
+
+.github-link {
+  width: 45px; /* Set width of the button */
+  height: 45px; /* Set height of the button */
+  background: transparent; /* Make the background transparent */
+  color: #fff; /* White icon color */
+  display: flex;
+  align-items: center; /* Center the GitHub logo vertically */
+  justify-content: center; /* Center the GitHub logo horizontally */
+  border: 3px solid transparent; /* Transparent border */
+  border-radius: 50%; /* Circle shape for the button */
+  background-image: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899); /* Gradient border */
+  background-origin: border-box;
+  background-clip: content-box, border-box; /* Clip the background */
+  text-decoration: none;
+  transition: transform 0.2s ease, border 0.3s ease;
+}
+
+.github-link:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  background-image: linear-gradient(90deg, #2563eb, #7e22ce, #db2777); /* Darker gradient on hover */
+}
+ 
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  color: #fff;
+}
+/* Add spacing for sections when scrolling due to the navbar */
+.projects-container,
+.education-container,
+.skills-container,
+.contact-container {
+  scroll-margin-top: 80px; /* Adjust this value based on your navbar's height */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid #333;
+    z-index: 999;
+  }
+  .nav-link.active {
+    color: #00bcd4; /* Highlight color */
+    font-weight: bold;
+    border-bottom: 2px solid #00bcd4; /* Optional underline */
+  }
+  
+  
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  @media (max-width: 768px) {
+    .github-button {
+      display: none; /* Hide GitHub button on smaller screens */
+    }
+  }
+}

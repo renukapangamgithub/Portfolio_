@@ -1,0 +1,254 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.5;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-bottom: 2rem; /* Space below HeroSection */
+}
+
+/* Hero Container */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
+  background-color: #000;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+/* Gradient Text */
+.typing-text,
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text; /* Safari */
+  -webkit-text-fill-color: transparent; /* Make text transparent */
+  color: transparent;
+}
+
+/* Buttons */
+.gradient-btn {
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899);
+  color: #fff;
+  padding: 10px 20px;
+  margin-right: 5px; /* Reduced space between buttons */
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 30px;
+  transition: 0.3s ease-in-out;
+}
+
+.gradient-btn:hover {
+  opacity: 0.8;
+  transform: scale(1.05);
+}
+
+/* Hero Buttons */
+.hero-buttons {
+  display: flex;
+  justify-content: flex-start; /* Align buttons to the left */
+  gap: 0.5rem; /* Reduced space between buttons */
+  margin-top: 1rem; /* Reduced space above the buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap if needed */
+  position: relative;
+}
+
+/* Social Icons */
+.social-icons {
+  display: flex;
+  justify-content: flex-start; /* Align icons in a row */
+  gap: 0.5rem; /* Reduced space between icons */
+  margin-top: 0.5rem; /* Reduced space above the icons */
+}
+
+.social-icon {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #3b82f6; /* Change color on hover */
+}
+
+/* Hero Image */
+.hero-image {
+  position: relative;
+  margin-top: 5rem; /* Added margin-top to prevent overlap with the nav */
+  text-align: center; /* Center the profile picture */
+}
+
+.hero-image .profile-pic {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid transparent;
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899);
+  background-clip: padding-box;
+}
+
+.circle-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    padding: 0 5%;
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  .hero-image .profile-pic {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 868px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 2rem;
+  }
+
+  .hero-image {
+    order: -1; /* Move the profile picture above the text */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.3rem;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+  }
+
+  .hero-buttons {
+    gap: 0.4rem; /* Further reduced space between buttons */
+  }
+
+  .hero-image .profile-pic {
+    width: 250px;
+    height: 250px;
+  }
+
+  .gradient-btn {
+    font-size: 0.7rem;
+    padding: 6px 12px;
+    margin-right: 4px; /* Reduced margin */
+  }
+
+  .social-icons {
+    gap: 0.4rem; /* Further reduced space between icons */
+  }
+}
+
+@media (max-width: 580px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .hero-image {
+    order: -1;
+    margin-top: 4rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.7rem;
+  }
+
+  .hero-buttons {
+    gap: 0.3rem; /* Further reduced gap for smaller screens */
+  }
+
+  .gradient-btn {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+    margin-right: 3px; /* Further reduced margin */
+  }
+
+  .social-icons {
+    gap: 0.3rem; /* Further reduced space between icons */
+  }
+}

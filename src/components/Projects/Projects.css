@@ -1,0 +1,251 @@
+/* General container styling */
+.projects-container {
+  padding: 2rem;
+  background: #000;
+  color: #fff;
+  text-align: center;
+}
+
+/* Section header styling */
+.section-header {
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/* Project grid layout */
+.projects-grid {
+  display: grid; /* Grid layout */
+  grid-template-columns: repeat(3, 1fr); /* Default to 3 columns */
+  gap: 1rem;
+}
+
+/* Project card */
+.project-card {
+  height: 200px; /* Reduced height */
+  width: 100%; /* Full width of the grid column */
+  background-size: cover; /* Ensures the image covers the entire card */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents tiling */
+  border-radius: 10px; /* Rounded corners */
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+  width: 100%; /* Ensure the image fills the card width */
+  height: auto; /* Maintain aspect ratio while shrinking */
+  max-height: 200px; /* Limit the height of the image */
+  object-fit: cover; /* Ensure the image fits without distortion */
+  border-radius: 10px;
+}
+
+/* Hover effect for project card */
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Project overlay */
+.project-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+/* Tech badge styling */
+.tech-badge {
+  display: inline-block;
+  background: black;
+  color: #0366d6;
+  padding: 0.2rem 0.5rem;
+  border-radius: 30px;
+  margin-right: 0.5rem;
+  font-size: 0.8rem;
+  border: 2px solid #0366d6;
+}
+
+/* Modal styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content {
+  background: #1d1d1d;
+  padding: 20px;
+  border-radius: 10px;
+  width: 70%;
+  max-width: 400px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+.modal-content img {
+  width: 90%; /* Reduce image width within modal */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 200px; /* Constrain the height */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.modal-content h3 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.modal-content .modal-description {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin: 10px 0;
+}
+
+/* Modal links styling */
+.modal-links {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: auto;
+  width: 100%;
+}
+
+.modal-links .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  border: none;
+  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899); /* Blue to Purple to Pink gradient */
+  background-size: 200% auto;
+  background-position: 0% 50%;
+}
+
+.modal-links .btn:hover {
+  background-position: 100% 50%; /* Animate gradient */
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 6px 15px rgba(236, 72, 153, 0.5); /* Glowing effect */
+}
+
+
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #ff1744;
+}
+
+/* Add a blue border around the tech badges */
+.blue-border {
+  border: 1px solid #2196f3;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+    gap: 1.5rem;
+  }
+
+  .modal-content {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .projects-container {
+    padding: 3rem 1rem;
+  }
+
+  .modal-content {
+    width: 90%;
+    min-height: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 2rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .project-card {
+    height: 150px;
+  }
+
+  .project-card img {
+    max-height: 150px;
+  }
+
+  .modal-content {
+    width: 95%;
+    min-height: 350px;
+  }
+
+  .modal-content img {
+    max-height: 120px;
+  }
+
+  .modal-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .modal-links .btn {
+    width: 100%;
+  }
+}
