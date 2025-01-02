@@ -57,7 +57,7 @@ const HeroSection = () => {
         <div className="hero-buttons">
           <a
             href={cvFile} // Link to the CV file
-            download="Renuka_!.pdf" // The name to give the downloaded file
+            download="Resume_!.pdf" // The name to give the downloaded file
             className="btn gradient-btn"
           >
             Resume
