@@ -1,7 +1,8 @@
 import bookAppImage from "./images/book-app.png";
 import mollyBearImage from "./images/molly-bear.png";
 import coffeeShopImage from "./images/coffee-shop.png";
-import foodDeliveryImage from "./images/food-delivery.png"; // Add the image import for Food Delivery App
+import foodDeliveryImage from "./images/food-delivery.png";
+import realEstateImage from "./images/real-estate.png"; // Add the image import for Real Estate Website
 
 const projectsData = [
   {
@@ -16,9 +17,9 @@ const projectsData = [
   {
     title: "BookStore App",
     description: "A full-stack book store app built using React for the frontend, Node.js for the backend, and MongoDB for database management. It allows users to browse, purchase, and manage books.",
-    progress: 75,
+    progress: 100,
     technologies: ["MongoDB", "Express", "React", "Node.js", "CSS"],
-    demoLink: "https://book-store-front-zeta.vercel.app/",
+    demoLink: "https://book-frontend-1810.onrender.com",
     github: "https://github.com/renukapangamgithub/BOOK.git",
     image: bookAppImage,
   },
@@ -35,10 +36,19 @@ const projectsData = [
     title: "Coffee Shop Website",
     description: "A React-based e-commerce website for a coffee shop, allowing users to browse products, place orders, and view their shopping cart. It features an interactive and responsive design.",
     progress: 100,
-    technologies: ["React", "CSS"],
+    technologies: ["React.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
     demoLink: "https://coffee-shop-c560cc.netlify.app/",
     github: "https://github.com/renukapangamgithub/coffeeshop.git",
     image: coffeeShopImage,
+  },
+  {
+    title: "Real Estate Website",
+    description: "A modern real estate website built using React.js and Tailwind CSS. It provides a user-friendly interface for browsing properties, viewing details, and contacting agents.",
+    progress: 100,
+    technologies: ["React.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
+    demoLink: "https://real-estate-a808dd.netlify.app", // Replace with your actual demo link
+    github: "https://github.com/renukapangamgithub/Real-Estate-website", // Replace with your actual GitHub repository link
+    image: realEstateImage,
   },
 ];
 

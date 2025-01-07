@@ -41,7 +41,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="social-icon"
           >
-            <FaGithub size={30} />
+            <FaGithub size={40} />
           </a>
           <a
             href="https://www.linkedin.com/in/renuka-pangam-1b111931b/"
@@ -49,7 +49,7 @@ const HeroSection = () => {
             rel="noopener noreferrer"
             className="social-icon"
           >
-            <FaLinkedin size={30} />
+            <FaLinkedin size={40} />
           </a>
         </div>
 

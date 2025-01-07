@@ -22,7 +22,9 @@ const Projects = () => {
             key={index}
             style={{ backgroundImage: `url(${project.image})` }}
             onClick={() => openModal(project)}
-          ></div>
+          >
+            <button className="project-btn">View Project</button>
+          </div>
         ))}
       </div>
 
