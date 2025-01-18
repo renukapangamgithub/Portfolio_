@@ -2,7 +2,8 @@ import bookAppImage from "./images/book-app.png";
 import mollyBearImage from "./images/molly-bear.png";
 import coffeeShopImage from "./images/coffee-shop.png";
 import foodDeliveryImage from "./images/food-delivery.png";
-import realEstateImage from "./images/real-estate.png"; // Add the image import for Real Estate Website
+import realEstateImage from "./images/real-estate.png";
+import decosphereImage from "./images/decosphere.png"; // Add the image import for Decosphere Website
 
 const projectsData = [
   {
@@ -46,9 +47,18 @@ const projectsData = [
     description: "A modern real estate website built using React.js and Tailwind CSS. It provides a user-friendly interface for browsing properties, viewing details, and contacting agents.",
     progress: 100,
     technologies: ["React.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
-    demoLink: "https://real-estate-a808dd.netlify.app", // Replace with your actual demo link
-    github: "https://github.com/renukapangamgithub/Real-Estate-website", // Replace with your actual GitHub repository link
+    demoLink: "https://real-estate-a808dd.netlify.app",
+    github: "https://github.com/renukapangamgithub/Real-Estate-website",
     image: realEstateImage,
+  },
+  {
+    title: "Decosphere",
+    description: "A creative and interactive platform built using the MERN stack (MongoDB, Express, React, Node.js) for showcasing various home decor products. It offers features like product browsing, detailed views, and easy navigation.",
+    progress: 100,
+    technologies: ["MongoDB", "Express", "React", "Node.js", "CSS"],
+    demoLink: "https://decosphere-frontend1.onrender.com", 
+    github: "https://github.com/renukapangamgithub/DecoSphere", 
+    image: decosphereImage,
   },
 ];
 
