@@ -1,11 +1,30 @@
 import bookAppImage from "./images/book-app.png";
 import mollyBearImage from "./images/molly-bear.png";
-import  beachifyImage from "./images/beachify.png";
+import beachifyImage from "./images/beachify.png";
 import foodDeliveryImage from "./images/food-delivery.png";
 import realEstateImage from "./images/real-estate.png";
 import decosphereImage from "./images/decosphere.png"; // Add the image import for Decosphere Website
 
 const projectsData = [
+  {
+    title: "Beachify",
+    description:
+      "A full-stack web application providing live beach data (using Langitube and Longitude APIs), hotel bookings with Stripe integration, tour guides, chat app with WebSocket, live weather updates, and user reviews with image uploads.",
+    progress: 100,
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Stripe",
+      "Socket.IO",
+      "Multer",
+      "Tailwind CSS",
+    ],
+    demoLink: "https://beachify-final-frontend.onrender.com/home",
+    github: "https://github.com/renukapangamgithub/beachify-Final",
+    image: beachifyImage, // Ensure beachifyImage is imported or defined
+  },
   {
     title: "Food Delivery App",
     description:
@@ -36,15 +55,6 @@ const projectsData = [
     github: "https://github.com/renukapangamgithub/TEDDY.git",
     image: mollyBearImage,
   },
-  {
-  title: "Beachify",
-  description: "A full-stack web application providing live beach data (using Langitube and Longitude APIs), hotel bookings with Stripe integration, tour guides, chat app with WebSocket, live weather updates, and user reviews with image uploads.",
-  progress: 100,
-  technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Stripe", "Socket.IO", "Multer", "Tailwind CSS"],
-  demoLink: "https://beachify-final-frontend.onrender.com/home",
-  github: "https://github.com/renukapangamgithub/beachify-Final",
-  image: beachifyImage, // Ensure beachifyImage is imported or defined
-},
   {
     title: "Real Estate Website",
     description:
