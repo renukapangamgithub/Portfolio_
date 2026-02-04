@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Certificates.css";
+import "./certificates.css";
 import awsLogo from "../../assets/AWS.png";
 import googleLogo from "../../assets/google.jpg";
 import deloitteLogo from "../../assets/deloitte.jpg";
