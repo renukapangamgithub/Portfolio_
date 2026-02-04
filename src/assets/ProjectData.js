@@ -9,7 +9,7 @@ const projectsData = [
   {
     title: "Beachify",
     description:
-      "A full-stack web application providing live beach data (using Langitube and Longitude APIs), hotel bookings with Stripe integration, tour guides, chat app with WebSocket, live weather updates, and user reviews with image uploads.",
+      "A full-stack beach discovery platform offering live beach data, hotel and tour bookings, real-time chat, weather updates, and user reviews with image uploads for a complete travel planning experience.",
     progress: 100,
     technologies: [
       "React.js",
@@ -28,7 +28,7 @@ const projectsData = [
   {
     title: "Food Delivery App",
     description:
-      "A feature-rich food delivery application built using the MERN stack. It offers functionalities like restaurant browsing, food ordering, real-time order tracking, and secure payment integration using Stripe. Includes an admin dashboard for managing restaurants, orders, and users.",
+      "A food delivery application allowing users to browse restaurants, place orders, track deliveries in real time, and make secure payments, with an admin dashboard for management.",
     progress: 100,
     technologies: ["MongoDB", "Express", "React", "Node.js", "CSS", "Stripe"],
     demoLink: "https://food-del-frontend-3.onrender.com",
@@ -38,7 +38,7 @@ const projectsData = [
   {
     title: "BookStore App",
     description:
-      "A full-stack book store app built using React for the frontend, Node.js for the backend, and MongoDB for database management. It allows users to browse, purchase, and manage books.",
+      "A full-stack bookstore application where users can browse, purchase, and manage books through a clean UI backed by a scalable Node.js and MongoDB backend.",
     progress: 100,
     technologies: ["MongoDB", "Express", "React", "Node.js", "CSS"],
     demoLink: "https://book-frontend-1810.onrender.com",
@@ -48,7 +48,7 @@ const projectsData = [
   {
     title: "Molly Bear Website",
     description:
-      "An e-commerce platform for a bear shop, built using the MERN stack (MongoDB, Express, React, Node.js). Features include user authentication, shopping cart, payment gateway integration, and a chatbot to enhance customer experience by assisting with product inquiries, order tracking, and general support.",
+      "An e-commerce website for a toy store featuring user authentication, shopping cart, secure payments, and an integrated chatbot to assist users with product queries and orders.",
     progress: 50,
     technologies: ["MongoDB", "Express", "React", "Node.js", "CSS"],
     demoLink: "https://molly-bears.netlify.app/",
@@ -58,7 +58,7 @@ const projectsData = [
   {
     title: "Real Estate Website",
     description:
-      "A modern real estate website built using React.js and Tailwind CSS. It provides a user-friendly interface for browsing properties, viewing details, and contacting agents.",
+      "A responsive real estate website built with React and Tailwind CSS, enabling users to browse properties, view details, and connect with agents through a modern UI.",
     progress: 100,
     technologies: ["React.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
     demoLink: "https://real-estate-a808dd.netlify.app",
@@ -68,7 +68,7 @@ const projectsData = [
   {
     title: "Decosphere",
     description:
-      "A creative and interactive platform built using the MERN stack (MongoDB, Express, React, Node.js) for showcasing various home decor products. It offers features like product browsing, detailed views, and easy navigation.",
+      "A decor showcase platform designed for browsing home decor products with interactive UI components and smooth navigation for an enhanced user experience.",
     progress: 100,
     technologies: ["MongoDB", "Express", "React", "Node.js", "CSS"],
     demoLink: "https://decosphere-frontend1.onrender.com",

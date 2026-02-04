@@ -1,262 +1,107 @@
-/* General container styling */
+/* ===== Projects Section ===== */
 .projects-container {
-  padding: 2rem;
+  padding: 80px 6%;
   background: #000;
-  color: #fff;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  color: #ffffff;
 }
 
-/* Section header styling */
+.projects-container > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* ===== Section Header ===== */
 .section-header {
-  margin-bottom: 2rem;
+  margin-bottom: 50px;
+}
+
+.section-subtitle {
+  color: #9ca3af;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  font-weight: bold;
+  font-size: 36px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: #3b82f6;
 }
 
-/* Project grid layout */
+/* ===== Grid Layout ===== */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Show 3 columns */
-  gap: 1rem;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
-/* Project card */
+
+/* ===== Card Hover ===== */
 .project-card {
-  height: 250px; /* Set height for the project cards */
-  width: 100%; /* Full width of the grid column */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-btn {
-  display: none; /* Hide button by default */
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 10px 20px;
-  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899); /* Gradient background */
-  color: white;
-  border: none;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
+  transition: 0.4s ease;
 }
 
 .project-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.06);
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.5);
 }
 
-.project-card:hover .project-btn {
-  display: block; /* Show button on hover */
+/* ===== Image Wrapper ===== */
+.project-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 190px;
+  border-radius: 14px;
+  overflow: hidden;
+  margin-bottom: 18px;
 }
 
-/* Tech badge styling */
-.tech-badge {
-  display: inline-block;
-  background: black;
-  color: #0366d6;
-  padding: 0.2rem 0.5rem;
-  border-radius: 30px;
-  margin-right: 0.5rem;
-  font-size: 0.8rem;
-  border: 2px solid #0366d6;
-}
-
-/* Modal styling */
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+.project-img-wrapper img {
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000;
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.modal-content {
-  background: #1d1d1d;
-  padding: 20px;
-  border-radius: 10px;
-  width: 70%;
-  max-width: 400px;
-  min-height: 500px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
-.modal-content img {
-  width: 80%;
-  height: auto;
-  max-height: 300px;
   object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 20px;
 }
 
-.modal-content h3 {
-  font-size: 1.5rem;
-  color: #fff;
-}
-
-.modal-content .modal-description {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin: 10px 0;
-}
-
-/* Modal links styling */
-.modal-links {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: auto;
-  width: 100%;
-}
-
-.modal-links .btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 1rem;
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-  border: none;
-  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899); /* Blue to Purple to Pink gradient */
-  background-size: 200% auto;
-  background-position: 0% 50%;
-}
-
-.modal-links .btn:hover {
-  background-position: 100% 50%;
-  transform: scale(1.05);
-  box-shadow: 0px 6px 15px rgba(236, 72, 153, 0.5);
-}
-
-/* Close button */
-.close-btn {
+/* ===== Icons on Image ===== */
+.project-hover-icons {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  color: #fff;
-  cursor: pointer;
-  transition: color 0.3s ease;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease;
 }
 
-.close-btn:hover {
-  color: #ff1744;
+/* SHOW ICONS WHEN CARD IS HOVERED */
+.project-card:hover .project-hover-icons {
+  opacity: 1;
 }
 
-/* Add a blue border around the tech badges */
-.blue-border {
-  border: 1px solid #2196f3;
+.project-hover-icons a {
+  font-size: 30px;
+  color: #000000;
+  pointer-events: auto;
+  transition: 0.3s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
-    gap: 1.5rem;
-    justify-items: center;
-  }
-
-  .modal-content {
-    width: 80%;
-  }
-}
-
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr; /* Single column layout for small screens */
-    gap: 1rem;
-    justify-items: center;
-  }
-
-  .section-title {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .projects-container {
-    padding: 3rem 1rem;
-  }
-
-  .modal-content {
-    width: 90%;
-    min-height: 400px;
-  }
-}
-
-@media (max-width: 480px) {
-  .projects-container {
-    padding: 2rem 1rem;
-    display: block;
-  }
-
-  .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 1.2rem;
-  }
-
-  .project-card {
-    height: 150px;
-  }
-
-  .project-card img {
-    max-height: 150px;
-  }
-
-  .modal-content {
-    width: 95%;
-    min-height: 350px;
-  }
-
-  .modal-content img {
-    max-height: 120px;
-  }
-
-  .modal-links {
-    flex-direction: column;
-    gap: 10px;
-    padding-top: 15px;
-  }
-
-  .modal-links .btn {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-  }
+.project-hover-icons a:hover {
+  color: #3b82f6;
+  transform: scale(1.25);
 }

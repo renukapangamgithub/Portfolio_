@@ -63,6 +63,15 @@ function Navbar() {
             Education
           </AnchorLink>
         </li>
+           <li>
+          <AnchorLink
+            href="#certificates"
+            className="nav-link"
+            onClick={() => setIsMenuOpen(false)}
+          >
+           Certificates
+          </AnchorLink>
+        </li>
         <li>
           <AnchorLink
             href="#contact"

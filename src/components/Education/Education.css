@@ -1,175 +1,156 @@
-/* Timeline Element Content Styling */
-.VerticalTimelineElement-content {
-  background: rgba(0, 0, 0, 0.8);
-  border: 5px solid transparent;
-  border-image: linear-gradient(90deg, #00f260, #0575e6) 1;
-  border-radius: 25px;
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 
-              0 0 10px rgba(147, 51, 234, 0.3), 
-              0 0 10px rgba(236, 72, 153, 0.3);
-  overflow: hidden;
-  padding: 20px;
-  color: white;
+/* =============================
+   EDUCATION SECTION
+============================= */
+.education-section {
+  background: #0b0b0e; /* unchanged */
+  padding: 60px 16px;
+  color: #e5e7eb;
 }
 
-/* Timeline Arrow */
-.VerticalTimelineElement-contentArrow {
-  border-right: 7px solid rgba(0, 0, 0, 0.8);
+/* =============================
+   HEADER
+============================= */
+.education-header {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-/* Hide the Default Timeline Dot (Icon) */
-.VerticalTimelineElement .VerticalTimelineElement-icon {
-  display: none !important;
+.education-subtitle {
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #9ca3af;
 }
 
-/* Custom Styled Icon */
-.VerticalTimelineElement .VerticalTimelineElement-icon {
-  background: linear-gradient(90deg, #00f260, #0575e6); 
-  width: 30px; 
-  height: 30px; 
-  border-radius: 50%; 
-  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3), 
-              0 0 10px rgba(147, 51, 234, 0.3), 
-              0 0 10px rgba(236, 72, 153, 0.3); 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white; 
-}
-
-/* Font Icon Inside Timeline Icon */
-.VerticalTimelineElement .VerticalTimelineElement-icon i {
-  font-size: 16px; 
-  color: white; 
-}
-
-/* Education Container Styling */
-.education-container {
-  background-color: #000;
-  padding: 50px;
-  color: white;
-  overflow: hidden;
-  position: relative;
-  width: 100%; 
-}
-
-/* Text Styling */
+/* EDUCATION TITLE – ROYAL BLUE */
 .education-title {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 34px;
+  font-weight: 700;
+  margin-top: 6px;
+  color: #3b82f6; /* exact royal blue */
+}
+
+/* =============================
+   EDUCATION LIST (ONE ROW)
+============================= */
+.education-list {
+  max-width: 1100px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+/* =============================
+   EDUCATION CARD
+============================= */
+.education-card {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+  transition: transform 0.35s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-6px);
+}
+
+/* =============================
+   MARKER (ROYAL BLUE)
+============================= */
+.education-marker {
+  width: 4px;
+  border-radius: 6px;
+  background: #3b82f6; /* exact royal blue */
+  box-shadow: 0 0 12px rgba(59, 130, 246, 0.7),
+              0 0 24px rgba(59, 130, 246, 0.5);
+}
+
+/* =============================
+   CARD CONTENT
+============================= */
+.education-content {
+  background: #121217;
+  padding: 24px;
+  border-radius: 14px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  flex: 1;
+  position: relative;
+  transition: all 0.35s ease;
+}
+
+/* Glow + depth on hover */
+.education-card:hover .education-content {
+  box-shadow:
+    0 0 20px rgba(59, 130, 246, 0.35),
+    0 0 40px rgba(59, 130, 246, 0.25);
+}
+
+/* Soft shine overlay */
+.education-content::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(59, 130, 246, 0.08),
+    transparent
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.education-card:hover .education-content::after {
+  opacity: 1;
+}
+
+/* =============================
+   TEXT STYLING & HIGHLIGHTS (BIGGER)
+============================= */
+.education-date {
+  font-size: 13px;
+  color: #3b82f6; /* royal blue */
+  font-weight: 500;
+  display: block;
+  margin-bottom: 8px;
+  text-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+.education-content h3 {
+  font-size: 19px;
+  font-weight: 600;
+  color: #e0e7ff;
+  margin-bottom: 8px;
 }
 
 .education-institution {
+  font-size: 15px;
+  color: #3b82f6; /* royal blue */
+  font-weight: 500;
+  margin-bottom: 6px;
+  text-shadow: 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+.education-grade {
   font-size: 14px;
-  color: #a6a6a6;
+  color: #3b82f6; /* royal blue */
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
-.education-details {
-  margin-top: 10px;
-  list-style-type: disc;
-  padding-left: 20px;
+.education-description {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #d1d5db;
 }
 
-.education-detail-item {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.6;
-}
-
-/* Timeline Layout Styling */
-.VerticalTimeline {
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
-}
-
-/* Center Align Section Header */
-.section-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section-subtitle {
-  font-size: 16px;
-  color: #a6a6a6;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.section-title {
-  font-size: 32px;
-  font-weight: bold;
-  color: white;
-  margin-top: 5px;
-}
-
-/* Timeline Line Styling */
-.VerticalTimeline::before {
-  content: '';
-  position: absolute;
-  width: 4px;
-  background: linear-gradient(90deg, #00f260, #000000);
-  left: 50%;
-  top: 0;
-  bottom: 0;
-  transform: translateX(-50%);
-  z-index: -1; 
-}
-
-.VerticalTimelineElement:hover::before {
-  background: linear-gradient(90deg, #ec4899, #9333ea, #3b82f6);
-  height: 100%;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .VerticalTimeline {
-    flex-direction: column;
-    align-items: center; /* Keep elements centered */
-  }
-
-  .VerticalTimeline::before {
-    left: 50%; /* Ensure the line remains centered */
-    transform: translateX(-50%);
-  }
-
-  .VerticalTimelineElement-content {
-    width: 100%; /* Keep content width responsive */
-    margin: 20px 0; /* Add spacing between elements */
-  }
-
-  .VerticalTimelineElement-contentArrow {
-    display: block; /* Keep arrow visible */
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 28px; /* Slightly reduce section title size */
-  }
-
-  .section-subtitle {
-    font-size: 14px;
-  }
-
-  .education-title {
-    font-size: 16px;
-  }
-
-  .education-institution {
-    font-size: 12px;
-  }
-
-  .education-details {
-    padding-left: 15px;
-  }
-
-  .education-detail-item {
-    font-size: 11px;
+/* =============================
+   RESPONSIVE
+============================= */
+@media (max-width: 900px) {
+  .education-list {
+    grid-template-columns: 1fr;
   }
 }

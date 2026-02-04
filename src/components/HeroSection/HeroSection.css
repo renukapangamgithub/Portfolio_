@@ -1,4 +1,6 @@
-/* General Reset */
+/* =============================
+   GENERAL RESET
+============================= */
 * {
   margin: 0;
   padding: 0;
@@ -9,138 +11,172 @@ body {
   font-family: Arial, sans-serif;
   background-color: #000;
   color: #fff;
-  line-height: 1.5;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
-/* Hero Section Styles */
+/* =============================
+   HERO SECTION
+============================= */
 .hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 2rem 1rem;
-  margin-bottom: 2rem; /* Space below HeroSection */
+  width: 100%;
 }
 
-/* Hero Container */
+/* HERO CONTAINER */
 .hero-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  padding: 0 10%;
+  min-height: 100vh;
+  padding: 0 8%;
   background-color: #000;
 }
 
+/* =============================
+   HERO CONTENT
+============================= */
 .hero-content {
   max-width: 50%;
 }
 
 .hero-content h1 {
   font-size: 4rem;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 
 .hero-content h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
+  color: #3b82f6;
 }
 
 .hero-content p {
   font-size: 1rem;
-  line-height: 1.6;
   color: #aaa;
   margin-bottom: 2rem;
 }
 
-/* Gradient Text */
+/* ROYAL BLUE TEXT */
 .typing-text,
 .gradient-text {
-  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899);
-  background-clip: text;
-  -webkit-background-clip: text; /* Safari */
-  -webkit-text-fill-color: transparent; /* Make text transparent */
-  color: transparent;
+  color: #3b82f6;
 }
 
-/* Buttons */
+/* =============================
+   BUTTONS
+============================= */
+.hero-buttons {
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.8rem;
+}
+
 .gradient-btn {
-  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899);
+  background: #3b82f6;
   color: #fff;
-  padding: 10px 20px;
-  margin-right: 5px; /* Reduced space between buttons */
+  padding: 10px 22px;
+  border-radius: 30px;
+  font-size: 1rem;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
-  border-radius: 30px;
-  transition: 0.3s ease-in-out;
+  transition: 0.3s ease;
+  box-shadow: 0 0 14px rgba(59, 130, 246, 0.55);
 }
 
 .gradient-btn:hover {
-  opacity: 0.8;
   transform: scale(1.05);
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.75);
 }
 
-/* Hero Buttons */
-.hero-buttons {
-  display: flex;
-  justify-content: flex-start; /* Align buttons to the left */
-  gap: 0.5rem; /* Reduced space between buttons */
-  margin-top: 1rem; /* Reduced space above the buttons */
-  flex-wrap: wrap; /* Allow buttons to wrap if needed */
-  position: relative;
-}
-
-/* Social Icons */
+/* =============================
+   SOCIAL ICONS
+============================= */
 .social-icons {
   display: flex;
-  justify-content: flex-start; /* Align icons in a row */
-  gap: 0.5rem; /* Reduced space between icons */
-  margin-top: 0.5rem; /* Reduced space above the icons */
+  gap: 0.7rem;
 }
 
 .social-icon {
+  font-size: 1.2rem;
   color: #fff;
   transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-  color: #3b82f6; /* Change color on hover */
+  color: #3b82f6;
 }
 
-/* Hero Image */
+/* =============================
+   HERO IMAGE
+============================= */
 .hero-image {
   position: relative;
-  margin-top: 5rem; /* Added margin-top to prevent overlap with the nav */
-  text-align: center; /* Center the profile picture */
 }
 
 .hero-image .profile-pic {
-  width: 400px;
-  height: 400px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   object-fit: cover;
-  border: 8px solid transparent;
-  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899);
-  background-clip: padding-box;
+  border: 8px solid #000;
+  box-shadow: 0 0 22px rgba(59, 130, 246, 0.45);
 }
 
 .circle-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(59, 130, 246, 0.1);
+  inset: 0;
   border-radius: 50%;
+  background: rgba(59, 130, 246, 0.12);
   z-index: -1;
 }
 
-/* Responsive Design */
+/* =============================
+   SPLIT ANIMATION
+============================= */
+.hero-container.center {
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.hero-container.split {
+  transition: all 1s ease-in-out;
+}
+
+.hero-content,
+.hero-image {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+.hero-content {
+  transform: translateX(-80px);
+}
+
+.hero-image {
+  transform: translateX(80px);
+}
+
+.hero-container.split .hero-content,
+.hero-container.split .hero-image {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+
+/* Tablets */
 @media (max-width: 1024px) {
   .hero-container {
     padding: 0 5%;
+  }
+
+  .hero-content {
+    max-width: 55%;
   }
 
   .hero-content h1 {
@@ -148,11 +184,7 @@ body {
   }
 
   .hero-content h2 {
-    font-size: 1.5rem;
-  }
-
-  .hero-content p {
-    font-size: 0.9rem;
+    font-size: 1.6rem;
   }
 
   .hero-image .profile-pic {
@@ -161,27 +193,33 @@ body {
   }
 }
 
+/* Mobile & Small Tablets */
 @media (max-width: 868px) {
   .hero-container {
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 2rem;
-  }
-
-  .hero-image {
-    order: -1; /* Move the profile picture above the text */
-    margin-top: 3rem;
-    margin-bottom: 2rem;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1.5rem;
   }
 
   .hero-content {
     max-width: 100%;
+    order: 2;
+  }
+
+  .hero-image {
+    order: 1;
     margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+
+  .hero-buttons,
+  .social-icons {
+    justify-content: center;
   }
 
   .hero-content h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .hero-content h2 {
@@ -189,66 +227,40 @@ body {
   }
 
   .hero-content p {
-    font-size: 0.8rem;
-  }
-
-  .hero-buttons {
-    gap: 0.4rem; /* Further reduced space between buttons */
-  }
-
-  .hero-image .profile-pic {
-    width: 250px;
-    height: 250px;
-  }
-
-  .gradient-btn {
-    font-size: 0.7rem;
-    padding: 6px 12px;
-    margin-right: 4px; /* Reduced margin */
-  }
-
-  .social-icons {
-    gap: 0.4rem; /* Further reduced space between icons */
+    font-size: 0.9rem;
   }
 }
 
+/* Small Mobile */
 @media (max-width: 580px) {
-  .hero-container {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 1rem;
-  }
-
-  .hero-image {
-    order: -1;
-    margin-top: 4rem;
-    margin-bottom: 1.5rem;
-  }
-
   .hero-content h1 {
     font-size: 2rem;
   }
 
   .hero-content h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 
   .hero-content p {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
   }
 
-  .hero-buttons {
-    gap: 0.3rem; /* Further reduced gap for smaller screens */
+  .hero-image .profile-pic {
+    width: 220px;
+    height: 220px;
   }
 
   .gradient-btn {
-    font-size: 0.6rem;
-    padding: 4px 8px;
-    margin-right: 3px; /* Further reduced margin */
+    font-size: 0.75rem;
+    padding: 6px 16px;
   }
+}
 
-  .social-icons {
-    gap: 0.3rem; /* Further reduced space between icons */
+/* Disable heavy animation on mobile */
+@media (max-width: 768px) {
+  .hero-content,
+  .hero-image {
+    transform: none !important;
+    opacity: 1 !important;
   }
 }

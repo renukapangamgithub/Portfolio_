@@ -1,159 +1,139 @@
-/* Main container for all services */
 .services-section {
-  padding: 4rem 2rem;
-  background: #000; /* Black background */
-  text-align: center;
+  padding: 4rem 1.5rem;
+  background: radial-gradient(circle at top, #0f172a, #000);
+  text-align: center;  
 }
 
-/* Services section heading */
-.services-heading {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: transparent;
-  background: linear-gradient(90deg, #3b82f6, #9333ea, #ec4899); /* Gradient background */
-  -webkit-background-clip: text; /* Clip the background to the text */
-  background-clip: text; /* Clip the background to the text */
-  margin-bottom: 3rem;
-}
 
-/* Flex container for all categories */
+/* Centered container with smaller width */
 .services-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
+  max-width: 1000px;        
+  width: 100%;
+  margin: 0 auto; 
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;            
 }
 
-/* Individual service category containers */
-.service-category {
-  background: transparent; /* Make background transparent */
-  border: 2px solid #fff; /* White border around the category */
-  border-radius: 10px;
-  padding: 1.5rem 1rem;
-  flex: 1 1 calc(33.33% - 2rem); /* Equal spacing for three categories */
+/* Heading (slightly smaller) */
+.services-heading {
+  width: 100%;
+  color: 3b82f6;
   text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional shadow for visual depth */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease;
+  font-size: 2.3rem;        /* 👈 reduced */
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  background-color: #3b82f6;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 2.8rem;
+}
+
+/* Category Card (smaller padding) */
+.service-category {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 14px;
+  padding: 1.1rem 1rem;     /* 👈 reduced */
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-category:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Enhance shadow on hover */
+  transform: translateY(-6px); /* smaller lift */
+  box-shadow: 0 14px 28px rgba(59, 80, 106, 0.35);
 }
 
-/* Headings for categories */
+/* Category Title */
 .service-category h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: #fff;
+  font-size: 1.25rem;       /* 👈 reduced */
+  margin-bottom: 1.1rem;
+  color: #e5e7eb;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
 }
 
-/* Icons container for each category */
+/* Icons Grid */
 .service-icons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(65px, 1fr));
+  gap: 0.9rem;              /* 👈 tighter */
 }
 
-/* Individual icon cards */
+/* Icon Card (smaller) */
 .service-icon {
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  height: 82px;             /* 👈 reduced */
+  padding: 0.6rem 0.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: black; /* Slightly darker background for icons */
-  border-radius: 8px;
-  padding: 1rem;
-  width: 60px;
-  height: 100px;
-  text-align: center;
-  transition: background 0.3s ease;
+  justify-content: center;
+  transition: all 0.25s ease;
 }
 
 .service-icon:hover {
-  background: #3b82f6; /* Adds a hover effect with blue highlight */
+  transform: translateY(-4px);
 }
 
-/* Image icons styling */
+/* Icon Image */
 .service-icon img {
-  width: 40px;
-  height: 40px;
-  margin-bottom: 0.5rem;
-  filter: none; /* Keeps the original colors of the icons */
+  width: 30px;              /* 👈 reduced */
+  height: 30px;
+  margin-bottom: 0.35rem;
 }
 
-/* Font Awesome icons styling */
+/* Font Icons */
 .service-icon i {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  color: inherit; /* Keep default colors */
+  font-size: 1.6rem;        /* 👈 reduced */
+  margin-bottom: 0.35rem;
+  color: #f9fafb;
 }
 
-/* Text below the icons */
+/* Label */
 .service-icon p {
-  font-size: 0.9rem;
-  color: #ddd;
+  font-size: 0.68rem;       /* 👈 reduced */
+  color: #f3f4f6;
+  text-align: center;
 }
 
-/* Responsive Design */
+/* =============================
+   RESPONSIVE
+============================= */
 @media (max-width: 1024px) {
   .services-container {
-    gap: 1.5rem; /* Reduce gap between categories */
-  }
-
-  .service-category {
-    flex: 1 1 calc(50% - 1.5rem); /* Two columns on medium screens */
-    margin-bottom: 2rem; /* Add space between rows */
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 92%;
   }
 }
 
 @media (max-width: 768px) {
   .services-container {
-    gap: 1rem; /* Reduce gap further for smaller screens */
-  }
-
-  .service-category {
-    flex: 1 1 100%; /* Single column layout */
-    margin-bottom: 1.5rem; /* Space between categories */
+    grid-template-columns: 1fr;
   }
 
   .services-heading {
-    font-size: 2rem; /* Reduce heading size */
-    margin-bottom: 2rem; 
-    margin-top: 100px;/* Reduce space below heading */
-  }
-
-  .services-section {
-    padding: 3rem 1rem; /* Adjust padding for smaller screens */
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 480px) {
   .services-section {
-    padding: 2rem 1rem; /* Further reduce padding */
-  }
-
-  .services-heading {
-    font-size: 1.8rem; /* Smaller heading size */
-    margin-bottom: 1.5rem;
-  }
-
-  .service-category {
-    padding: 1rem 0.5rem; /* Reduce padding inside the category */
+    padding: 2.8rem 1rem;
   }
 
   .service-icon {
-    width: 50px;
-    height: 90px; /* Adjust icon dimensions for smaller screens */
-    padding: 0.8rem;
+    height: 74px;
   }
 
   .service-icon img {
-    width: 35px;
-    height: 35px; /* Adjust icon image size */
+    width: 26px;
+    height: 26px;
   }
 
   .service-icon p {
-    font-size: 0.8rem; /* Smaller text below the icons */
+    font-size: 0.65rem;
   }
 }
