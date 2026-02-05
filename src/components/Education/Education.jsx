@@ -8,7 +8,7 @@ const educationData = [
     institution: "Universal College of Engineering, Kaman",
     cgpa: "8.0 CGPA",
     description:
-      "Currently pursuing a Bachelor's degree with a strong focus on software development, data structures, and modern web technologies.",
+      "Completed Bachelor's degree with a strong foundation in software development, data structures, and modern web technologies.",
   },
   {
     date: "Apr 2019 – Apr 2021",

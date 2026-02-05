@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FaGithub, FaBars, FaTimes } from "react-icons/fa"; // Import icons
-import AnchorLink from 'react-anchor-link-smooth-scroll'; // Import AnchorLink for smooth scroll
+import AnchorLink from "react-anchor-link-smooth-scroll"; // Import AnchorLink for smooth scroll
 import "./navbar.css"; // CSS for navbar styling
 
 function Navbar() {
@@ -15,9 +15,7 @@ function Navbar() {
     <nav className="navbar">
       {/* Logo */}
       <div className="logo">
-        
         <span className="logo-highlight">Renuka</span>
-
       </div>
 
       {/* Hamburger Menu for Small Screens */}
@@ -63,13 +61,22 @@ function Navbar() {
             Education
           </AnchorLink>
         </li>
-           <li>
+        <li>
+          <AnchorLink
+            href="#experience"
+            className="nav-link"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Experience
+          </AnchorLink>
+        </li>
+        <li>
           <AnchorLink
             href="#certificates"
             className="nav-link"
             onClick={() => setIsMenuOpen(false)}
           >
-           Certificates
+            Certificates
           </AnchorLink>
         </li>
         <li>
