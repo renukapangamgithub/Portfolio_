@@ -4,7 +4,7 @@ import "./Education.css";
 const educationData = [
   {
     date: "Oct 2021 – Sep 2025",
-    degree: "Bachelor of Technology (B.Tech) – Computer Science",
+   degree: "Bachelor of Engineering (B.E.) – Computer Science (Honours in Cybersecurity)",
     institution: "Universal College of Engineering, Kaman",
     cgpa: "8.0 CGPA",
     description:
