@@ -78,16 +78,6 @@ const projectsData = [
     image: mollyBearImage,
   },
   {
-    title: "Real Estate Website",
-    description:
-      "A responsive real estate website built with React and Tailwind CSS, enabling users to browse properties, view details, and connect with agents through a modern UI.",
-    progress: 100,
-    technologies: ["React.js", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
-    demoLink: "https://real-estate-a808dd.netlify.app",
-    github: "https://github.com/renukapangamgithub/Real-Estate-website",
-    image: realEstateImage,
-  },
-  {
     title: "Decosphere",
     description:
       "A decor showcase platform designed for browsing home decor products with interactive UI components and smooth navigation for an enhanced user experience.",
