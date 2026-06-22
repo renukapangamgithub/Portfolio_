@@ -4,8 +4,30 @@ import beachifyImage from "./images/beachify.png";
 import foodDeliveryImage from "./images/food-delivery.png";
 import realEstateImage from "./images/real-estate.png";
 import decosphereImage from "./images/decosphere.png"; // Add the image import for Decosphere Website
+import interviewIQImage from "./images/interviewIQImage.png";
 
 const projectsData = [
+   {
+    title: "InterviewIQ.AI",
+    description:
+      "An AI-powered interview preparation platform where users upload their resume (PDF) to receive personalized AI-generated interview questions and intelligent feedback. Features secure authentication, credit-based access with Razorpay payments, and an interactive dashboard for interview practice.",
+    progress: 100,
+    technologies: [
+      "React.js",
+      "Redux Toolkit",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Firebase Authentication",
+      "JWT",
+      "Razorpay",
+      "Framer Motion",
+      "Render",
+    ],
+    demoLink: "https://interviewiqagent-2frontend.onrender.com/",
+    github: "https://github.com/renukapangamgithub/InterviewIQAgent",
+    image: interviewIQImage,
+  },
   {
     title: "Beachify",
     description:

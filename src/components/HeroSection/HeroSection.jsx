@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./HeroSection.css";
-import profilePic from "../../assets/profilePic.jpeg";
+import profilePic from "../../assets/profilePic1 (2).jpeg";
 import { TypeAnimation } from "react-type-animation";
-import cvFile from "../../assets/RENUKA_PANGAM_CV_2026.pdf";
+import cvFile from "../../assets/RENUKA_PANGAM_CV.pdf";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const HeroSection = () => {
